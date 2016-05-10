@@ -1,0 +1,28 @@
+D:\萨驰项目\IMS Solution\URF.Framework\Repository.Pattern\bin\Debug\Repository.Pattern.dll.config
+D:\萨驰项目\IMS Solution\URF.Framework\Repository.Pattern\bin\Debug\Repository.Pattern.dll
+D:\萨驰项目\IMS Solution\URF.Framework\Repository.Pattern\bin\Debug\Repository.Pattern.pdb
+D:\萨驰项目\IMS Solution\URF.Framework\Repository.Pattern\obj\Debug\Repository.Pattern.dll
+D:\萨驰项目\IMS Solution\URF.Framework\Repository.Pattern\obj\Debug\Repository.Pattern.pdb
+D:\萨驰项目\SourceCode\saferun-IMS\IMS Solution\URF.Framework\Repository.Pattern\bin\Debug\Repository.Pattern.dll.config
+D:\萨驰项目\SourceCode\saferun-IMS\IMS Solution\URF.Framework\Repository.Pattern\bin\Debug\Repository.Pattern.dll
+D:\萨驰项目\SourceCode\saferun-IMS\IMS Solution\URF.Framework\Repository.Pattern\bin\Debug\Repository.Pattern.pdb
+D:\萨驰项目\SourceCode\saferun-IMS\IMS Solution\URF.Framework\Repository.Pattern\obj\Debug\Repository.Pattern.dll
+D:\萨驰项目\SourceCode\saferun-IMS\IMS Solution\URF.Framework\Repository.Pattern\obj\Debug\Repository.Pattern.pdb
+D:\萨驰项目\SourceCode\saferun-IMS\IMS Solution\URF.Framework\Repository.Pattern\obj\Debug\Repository.Pattern.csprojResolveAssemblyReference.cache
+D:\萨驰华辰项目\saferun-IMS\IMS Solution\URF.Framework\Repository.Pattern\bin\Debug\Repository.Pattern.dll.config
+D:\萨驰华辰项目\saferun-IMS\IMS Solution\URF.Framework\Repository.Pattern\bin\Debug\Repository.Pattern.dll
+D:\萨驰华辰项目\saferun-IMS\IMS Solution\URF.Framework\Repository.Pattern\bin\Debug\Repository.Pattern.pdb
+D:\萨驰华辰项目\saferun-IMS\IMS Solution\URF.Framework\Repository.Pattern\obj\Debug\Repository.Pattern.csprojResolveAssemblyReference.cache
+D:\萨驰华辰项目\saferun-IMS\IMS Solution\URF.Framework\Repository.Pattern\obj\Debug\Repository.Pattern.dll
+D:\萨驰华辰项目\saferun-IMS\IMS Solution\URF.Framework\Repository.Pattern\obj\Debug\Repository.Pattern.pdb
+D:\e-tms\e-tms\e-tms.Solution\URF.Framework\Repository.Pattern\bin\Debug\Repository.Pattern.dll.config
+D:\e-tms\e-tms\e-tms.Solution\URF.Framework\Repository.Pattern\bin\Debug\Repository.Pattern.dll
+D:\e-tms\e-tms\e-tms.Solution\URF.Framework\Repository.Pattern\bin\Debug\Repository.Pattern.pdb
+D:\e-tms\e-tms\e-tms.Solution\URF.Framework\Repository.Pattern\obj\Debug\Repository.Pattern.dll
+D:\e-tms\e-tms\e-tms.Solution\URF.Framework\Repository.Pattern\obj\Debug\Repository.Pattern.pdb
+D:\e-tms\e-tms\e-tms.Solution\URF.Framework\Repository.Pattern\obj\Debug\Repository.Pattern.csprojResolveAssemblyReference.cache
+C:\Users\work\Desktop\GitHub\pegatronb2b\pegatronb2b.Solution\URF.Framework\Repository.Pattern\bin\Debug\Repository.Pattern.dll.config
+C:\Users\work\Desktop\GitHub\pegatronb2b\pegatronb2b.Solution\URF.Framework\Repository.Pattern\bin\Debug\Repository.Pattern.dll
+C:\Users\work\Desktop\GitHub\pegatronb2b\pegatronb2b.Solution\URF.Framework\Repository.Pattern\bin\Debug\Repository.Pattern.pdb
+C:\Users\work\Desktop\GitHub\pegatronb2b\pegatronb2b.Solution\URF.Framework\Repository.Pattern\obj\Debug\Repository.Pattern.dll
+C:\Users\work\Desktop\GitHub\pegatronb2b\pegatronb2b.Solution\URF.Framework\Repository.Pattern\obj\Debug\Repository.Pattern.pdb

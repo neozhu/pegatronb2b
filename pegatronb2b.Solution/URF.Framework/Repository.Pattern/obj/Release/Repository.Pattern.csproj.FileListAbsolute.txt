@@ -1,0 +1,6 @@
+D:\萨驰项目\SourceCode\saferun-IMS\IMS Solution\URF.Framework\Repository.Pattern\bin\Release\Repository.Pattern.dll.config
+D:\萨驰项目\SourceCode\saferun-IMS\IMS Solution\URF.Framework\Repository.Pattern\bin\Release\Repository.Pattern.dll
+D:\萨驰项目\SourceCode\saferun-IMS\IMS Solution\URF.Framework\Repository.Pattern\bin\Release\Repository.Pattern.pdb
+D:\萨驰项目\SourceCode\saferun-IMS\IMS Solution\URF.Framework\Repository.Pattern\obj\Release\Repository.Pattern.csprojResolveAssemblyReference.cache
+D:\萨驰项目\SourceCode\saferun-IMS\IMS Solution\URF.Framework\Repository.Pattern\obj\Release\Repository.Pattern.dll
+D:\萨驰项目\SourceCode\saferun-IMS\IMS Solution\URF.Framework\Repository.Pattern\obj\Release\Repository.Pattern.pdb
