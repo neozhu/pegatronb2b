@@ -108,6 +108,10 @@ namespace pegatronb2b.Web.App_Start
 
             container.RegisterType<IRepositoryAsync<DataTableImportMapping>, Repository<DataTableImportMapping>>();
             container.RegisterType<IDataTableImportMappingService, DataTableImportMappingService>();
+
+
+            container.RegisterType<IRepositoryAsync<PgaGr>, Repository<PgaGr>>();
+            container.RegisterType<IPgaGrService, PgaGrService>();
         }
     }
 }

@@ -38,5 +38,7 @@ namespace pegatronb2b.Web.Models
         public DbSet<DataTableImportMapping> DataTableImportMappings { get; set; }
 
         public System.Data.Entity.DbSet<pegatronb2b.Web.Models.Company> Companies { get; set; }
+
+        public System.Data.Entity.DbSet<pegatronb2b.Web.Models.PgaGr> PgaGrs { get; set; }
     }
 }

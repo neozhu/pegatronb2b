@@ -90,3 +90,5 @@ C:\Users\work\Desktop\GitHub\pegatronb2b\pegatronb2b.Solution\pegatronb2b.Web\ob
 C:\Users\work\Desktop\GitHub\pegatronb2b\pegatronb2b.Solution\pegatronb2b.Web\obj\Debug\pegatronb2b.Web.csproj.GenerateResource.Cache
 C:\Users\work\Desktop\GitHub\pegatronb2b\pegatronb2b.Solution\pegatronb2b.Web\obj\Debug\pegatronb2b.Web.dll
 C:\Users\work\Desktop\GitHub\pegatronb2b\pegatronb2b.Solution\pegatronb2b.Web\obj\Debug\pegatronb2b.Web.pdb
+C:\Users\work\Desktop\GitHub\pegatronb2b\pegatronb2b.Solution\pegatronb2b.Web\obj\Debug\pegatronb2b.Web.Migrations.pgagr.resources
+C:\Users\work\Desktop\GitHub\pegatronb2b\pegatronb2b.Solution\pegatronb2b.Web\obj\Debug\pegatronb2b.Web.Migrations.addm.resources

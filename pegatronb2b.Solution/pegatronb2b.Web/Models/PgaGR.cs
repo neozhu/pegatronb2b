@@ -7,7 +7,7 @@ using System.Web;
 
 namespace pegatronb2b.Web.Models
 {
-    public class PgaGR:Entity
+    public partial class PgaGr:Entity
     {
         [Key]
         public int Id { get; set; }
@@ -28,9 +28,11 @@ namespace pegatronb2b.Web.Models
         
         public string ReceiptKey { get; set; }
         [Display(Name = "收货日期")]
-        public string ReceiptDate { get; set; }
+        public DateTime? ReceiptDate { get; set; }
         [Display(Name = "实收数量")]
         public decimal QtyReceived { get; set; }
+
+        public string Status { get; set; }
 
         [Display(Name="总件数" )]
         public string Susr1 { get; set; }

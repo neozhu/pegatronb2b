@@ -1,0 +1,395 @@
+﻿@model IEnumerable<pegatronb2b.Web.Models.PgaGr>
+
+
+
+
+@{
+    ViewBag.Title = "ASN导入作业";
+}
+
+
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>@ViewBag.Title</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="@Url.Action("Index", "Home")">Home</a>
+            </li>
+            <li>
+                <a href="#">PgaGrs</a>
+            </li>
+            <li class="active">
+                <strong>@ViewBag.Title</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+
+    </div>
+</div>
+
+
+<div class="wrapper wrapper-content animated fadeInRight">
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>ASN导入作业</h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+                        <!--
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-wrench"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li>
+                                <a href="table_data_tables.html#">Config option 1</a>
+                            </li>
+                            <li>
+                                <a href="table_data_tables.html#">Config option 2</a>
+                            </li>
+                        </ul>
+                        <a class="close-link">
+                            <i class="fa fa-times"></i>
+                        </a>
+                        -->
+                    </div>
+                </div>
+                <div class="ibox-content">
+
+                    <div class="table-responsive">
+
+
+                        <table id="pgagrs_datagrid" class="easyui-datagrid" title="ASN导入作业" style="width:auto;height:auto"
+                               data-options="
+                 rownumbers:true,
+				 checkOnSelect:true,
+                 selectOnCheck:true,
+                 idField:'Id',
+                 sortName:'Id',
+                 sortOrder:'desc',
+                remoteFilter: true,
+                singleSelect: true,
+                toolbar: '#pgagrs_toolbar',
+                url: '/PgaGrs/GetData',
+                method: 'get',
+                onClickCell: onClickCell,
+				onSelect:onSelect,
+                pagination: 'true'
+                   ">
+                            <thead>
+                                <tr>
+                                    @*<th data-options="field:'ck',checkbox:true"></th>*@
+                                    @*<th data-options="field:'Id',width:80 ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.Id)</th>*@
+                                    <th data-options="field:'TransmitId',width:140 ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.TransmitId)</th>
+                                    <th data-options="field:'ReceiptKey',width:140,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.ReceiptKey)</th>
+                                    <th data-options="field:'StoreKey',width:140,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.StoreKey)</th>
+                                    <th data-options="field:'GrDate',width:140 ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.GrDate)</th>
+                                    <th data-options="field:'UDNo',width:140,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.UDNo)</th>
+                                    <th data-options="field:'GRNo',width:140,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.GRNo)</th>
+                                    <th data-options="field:'GRItem',width:140,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.GRItem)</th>
+                                    <th data-options="field:'Vendor',width:140,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.Vendor)</th>
+                                    <th data-options="field:'Material',width:140,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.Material)</th>
+                                    <th data-options="field:'Quantity',width:100,align:'right',editor:{type:'numberbox',options:{precision:0,required:false}} ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.Quantity)</th>
+                                    <th data-options="field:'QtyReceived',width:100,align:'right' ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.QtyReceived)</th>
+                                    
+                                    <th data-options="field:'Susr1',width:140,editor:{type:'textbox',options:{required:true} } ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.Susr1)</th>
+                                    <th data-options="field:'Susr2',width:140,editor:{type:'textbox',options:{required:true} } ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.Susr2)</th>
+                                    <th data-options="field:'ReceiptType',width:140,editor:{type:'textbox',options:{required:true} } ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.ReceiptType)</th>
+                                    <th data-options="field:'Warehouse',width:140 ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.Warehouse)</th>
+                                    <th data-options="field:'RC',width:140,editor:{type:'textbox',options:{required:false} } ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.RC)</th>
+                                    <th data-options="field:'Plant',width:140 ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.Plant)</th>
+                                    <th data-options="field:'Area',width:140,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.Area)</th>
+                                    <th data-options="field:'Brand',width:140,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.Brand)</th>
+                                    <th data-options="field:'Status',width:140,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.Status)</th>
+                                    <th data-options="field:'ReceiptDate',width:160,align:'right',sortable:true,resizable:true  ,formatter:dateformatter">@Html.DisplayNameFor(model => model.ReceiptDate)</th>
+
+
+                                    
+
+
+                                   
+
+
+                                    
+                                    <th data-options="field:'CreatedBy',width:140,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.CreatedBy)</th>
+
+
+                                 
+
+
+                                </tr>
+                            </thead>
+                        </table>
+                        <div id="pgagrs_toolbar" style="height:auto">
+                          
+                                @*<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-plus',plain:true" onclick="append()">新增</a>*@
+                                <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-remove',plain:true" onclick="removeit()">删除</a>
+                                <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-save',plain:true" onclick="accept()">保存</a>
+                                <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-undo',plain:true" onclick="reject()">取消</a>
+
+                                <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-paperclip',plain:true" onclick="importexcel()">EXCEL 导入</a>
+                                <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-refresh',plain:true" onclick="reload()">刷新</a>
+                            <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-shopping-cart ',plain:true" onclick="importasn()">导入ASN</a>
+                        </div>
+                    </div>
+
+                    <!-- end ibox-content -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="importwindow" class="easyui-window" title="Excel 导入" data-options="modal:true,collapsible:false,minimizable:false,maximizable:false,closed:true,iconCls:'icon-paperclip'" style="width:500px;height:260px;padding:10px;">
+
+    <p><input type="file" name="file_upload" id="file_upload" /></p>
+
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+
+        $(function () {
+
+            $("#file_upload").uploadifive({
+                'height': 30,
+                'fileTypeDesc': 'Excel 2010 Files',
+                'fileTypeExts': '*.xlsx',
+                'uploadScript': '/FileUpload/Upload',
+                'buttonText': '选择EXCEL',
+                'multi': true,
+                'displayData': 'speed',
+                'formData': { 'modelType': 'Company' },
+                'width': 120,
+                'successTimeout': 100000,
+                'onFallback': function () {
+                    $.messager.alert('导入错误', '导入错误，请重试！<br>', 'error');
+                    $('#file_upload').uploadifive('clearQueue')
+                },
+                'onSelect': function (queue) {
+                    $.messager.progress({
+                        title: '执行导入',
+                        msg: '请等待...'
+                    });
+                },
+                'onUploadComplete': function (file, data) {
+                    $.messager.progress('close');
+                    var data = $.parseJSON(data);
+                    console.log(data);
+                    if (data.success == false) {
+                        $.messager.alert('导入错误', '导入错误，请修改后再倒入！<br>' + data.message, 'error');
+                        $("#file_upload").uploadifive('clearQueue')
+                    } else {
+                        $.messager.alert('导入完成', '导入完成！<br>', 'info');
+                        $dg.datagrid('reload');
+                        $('#importwindow').window('close');
+                    }
+                    return true;
+                    //alert('The file ' + file.name + ' was successfully uploaded with a response of ' + response + ':' + data);
+
+                }
+            });
+
+        })
+
+        function importexcel() {
+            $('#importwindow').window('open');
+        }
+
+        var $dg = $('#pgagrs_datagrid');
+        var editIndex = undefined;
+        function reload() {
+            $dg.datagrid('reload');
+        }
+        function endEditing() {
+            if (editIndex == undefined) { return true }
+            if ($dg.datagrid('validateRow', editIndex)) {
+
+                $dg.datagrid('endEdit', editIndex);
+                editIndex = undefined;
+
+
+                return true;
+            } else {
+                return false;
+            }
+        }
+        function onClickCell(index, field) {
+            var _operates = ["_operate1", "_operate2", "_operate3", "ck"]
+            if ($.inArray(field, _operates) >= 0) {
+                return;
+            }
+            if (editIndex != index) {
+                if (endEditing()) {
+                    $dg.datagrid('selectRow', index)
+                            .datagrid('beginEdit', index);
+                    var ed = $dg.datagrid('getEditor', { index: index, field: field });
+                    if (ed) {
+                        ($(ed.target).data('textbox') ? $(ed.target).textbox('textbox') : $(ed.target)).focus();
+                    }
+                    editIndex = index;
+                } else {
+                    $dg.datagrid('selectRow', editIndex);
+                }
+            }
+        }
+        function append() {
+            if (endEditing()) {
+                //$dg.datagrid('appendRow', { Status: 0 });
+                //editIndex = $dg.datagrid('getRows').length - 1;
+                $dg.datagrid('insertRow', { index: 0, row: { Status: 0 } });
+                editIndex = 0;
+                $dg.datagrid('selectRow', editIndex)
+                        .datagrid('beginEdit', editIndex);
+            }
+        }
+        function removeit() {
+            if (editIndex == undefined) { return }
+            $dg.datagrid('cancelEdit', editIndex)
+                    .datagrid('deleteRow', editIndex);
+            editIndex = undefined;
+        }
+        function accept() {
+            if (endEditing()) {
+                if ($dg.datagrid('getChanges').length) {
+                    var inserted = $dg.datagrid('getChanges', "inserted");
+                    var deleted = $dg.datagrid('getChanges', "deleted");
+                    var updated = $dg.datagrid('getChanges', "updated");
+                    var effectRow = new Object();
+                    if (inserted.length) {
+                        effectRow.inserted = inserted;
+                    }
+                    if (deleted.length) {
+                        effectRow.deleted = deleted;
+                    }
+                    if (updated.length) {
+                        effectRow.updated = updated;
+                    }
+                    //console.log(JSON.stringify(effectRow));
+                    $.post("/PgaGrs/SaveData", effectRow, function (response) {
+                        //console.log(response);
+                        if (response.Success) {
+                            $.messager.alert("提示", "提交成功！");
+                            $dg.datagrid('acceptChanges');
+                            $dg.datagrid('reload');
+                        }
+                    }, "JSON").error(function (response) {
+                        //console.log(response);
+                        $.messager.alert("错误", "提交错误了！", 'error');
+                        //$dg.datagrid('reload');
+                    });
+
+                }
+
+                //$dg.datagrid('acceptChanges');
+            }
+        }
+        function reject() {
+            $dg.datagrid('rejectChanges');
+            editIndex = undefined;
+        }
+        function getChanges() {
+            var rows = $dg.datagrid('getChanges');
+            alert(rows.length + ' rows are changed!');
+        }
+
+
+        $(function () {
+
+            $dg.datagrid('enableFilter', [
+                         {
+                             field: 'Status',
+                             type: 'combobox',
+                             options: {
+                                 panelHeight: 'auto',
+                                 data: [{ value: '', text: 'All' }, { value: 0, text: '启用' }, { value: 1, text: '禁用' }],
+                                 onChange: function (value) {
+                                     if (value == '') {
+                                         $dg.datagrid('removeFilterRule', 'Status');
+                                     } else {
+                                         $dg.datagrid('addFilterRule', {
+                                             field: 'Status',
+                                             op: 'equal',
+                                             value: value
+                                         });
+                                     }
+                                     $dg.datagrid('doFilter');
+                                 }
+                             }
+                         },
+
+                         {
+                             field: 'ReceiptDate',
+                             type: 'datebox',
+                             options: {
+                                 onChange: function (value) {
+                                     if (value == '') {
+                                         $dg.datagrid('removeFilterRule', 'ReceiptDate');
+                                     } else {
+                                         $dg.datagrid('addFilterRule', {
+                                             field: 'ReceiptDate',
+                                             op: 'equal',
+                                             value: value
+                                         });
+                                     }
+                                     $dg.datagrid('doFilter');
+                                 }
+                             }
+                         },
+                         {
+                             field: 'CreatedDate',
+                             type: 'datebox',
+                             options: {
+                                 onChange: function (value) {
+                                     if (value == '') {
+                                         $dg.datagrid('removeFilterRule', 'CreatedDate');
+                                     } else {
+                                         $dg.datagrid('addFilterRule', {
+                                             field: 'CreatedDate',
+                                             op: 'equal',
+                                             value: value
+                                         });
+                                     }
+                                     $dg.datagrid('doFilter');
+                                 }
+                             }
+                         },
+                         {
+                             field: 'ModifiedDate',
+                             type: 'datebox',
+                             options: {
+                                 onChange: function (value) {
+                                     if (value == '') {
+                                         $dg.datagrid('removeFilterRule', 'ModifiedDate');
+                                     } else {
+                                         $dg.datagrid('addFilterRule', {
+                                             field: 'ModifiedDate',
+                                             op: 'equal',
+                                             value: value
+                                         });
+                                     }
+                                     $dg.datagrid('doFilter');
+                                 }
+                             }
+                         },
+
+
+            ]);
+        })
+        //-----------------------------------------------------
+        //datagrid onSelect
+        //-----------------------------------------------------
+        function onSelect(index, row) {
+            //console.log(index, row);
+        }
+
+
+
+
+    </script>
+}
+
