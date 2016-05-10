@@ -5,14 +5,14 @@ namespace pegatronb2b.Web.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<pegatronb2b.Web.Models.eTmsContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<pegatronb2b.Web.Models.B2BContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(pegatronb2b.Web.Models.eTmsContext context)
+        protected override void Seed(pegatronb2b.Web.Models.B2BContext context)
         {
             //  This method will be called after migrating to the latest version.
 

@@ -7,9 +7,9 @@ using System.Web;
 
 namespace pegatronb2b.Web.Models
 {
-    public class eTmsContext:DataContext
+    public class B2BContext:DataContext
     {
-        public eTmsContext()
+        public B2BContext()
             : base("Name=DefaultConnection")
         { 
         }

@@ -64,7 +64,7 @@ namespace pegatronb2b.Web.App_Start
             container.RegisterType<IAuthenticationManager>(new InjectionFactory(o => HttpContext.Current.GetOwinContext().Authentication));
             //container.RegisterType<IAuthenticationManager>(new InjectionFactory(o => HttpContext.Current.GetOwinContext().Authentication));
             container.RegisterType<IUnitOfWorkAsync, UnitOfWork>(new PerRequestLifetimeManager());
-            container.RegisterType<IDataContextAsync, eTmsContext>(new PerRequestLifetimeManager());
+            container.RegisterType<IDataContextAsync, B2BContext>(new PerRequestLifetimeManager());
 
 
         

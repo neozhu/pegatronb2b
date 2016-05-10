@@ -27,7 +27,7 @@ namespace pegatronb2b.Web.Controllers
         //container.RegisterType<IRepositoryAsync<Company>, Repository<Company>>();
         //container.RegisterType<ICompanyService, CompanyService>();
 
-        //private eTmsContext db = new eTmsContext();
+        //private B2BContext db = new B2BContext();
         private readonly ICompanyService _companyService;
         private readonly IUnitOfWorkAsync _unitOfWork;
 
