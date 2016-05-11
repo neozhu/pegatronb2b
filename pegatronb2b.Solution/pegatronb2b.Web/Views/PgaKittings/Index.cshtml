@@ -88,57 +88,28 @@
                 <thead>
                     <tr>
                         @*<th data-options="field:'ck',checkbox:true"></th>*@
-        			<th data-options="field:'Id',width:80 ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.Id)</th>
-                
+        			@*<th data-options="field:'Id',width:80 ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.Id)</th>*@
+                    
 				     <th data-options="field:'SeqId',width:140,editor:{type:'textbox',options:{required:true} } ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.SeqId)</th>
-		
-                
-				     <th data-options="field:'Plant',width:140,editor:{type:'textbox',options:{required:true} } ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.Plant)</th>
-		
-                
+                        <th data-options="field:'OrderKey',width:140,editor:{type:'textbox',options:{required:false} } ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.OrderKey)</th>
+                        <th data-options="field:'KittingId',width:140,editor:{type:'textbox',options:{required:false} } ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.KittingId)</th>
+                        <th data-options="field:'Plant',width:140,editor:{type:'textbox',options:{required:true} } ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.Plant)</th>
 				     <th data-options="field:'HubId',width:140,editor:{type:'textbox',options:{required:false} } ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.HubId)</th>
-		
-                
 				     <th data-options="field:'PdLine',width:140,editor:{type:'textbox',options:{required:false} } ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.PdLine)</th>
-		
-                
 				     <th data-options="field:'TransType',width:140,editor:{type:'textbox',options:{required:false} } ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.TransType)</th>
-		
-                
 				     <th data-options="field:'MO',width:140,editor:{type:'textbox',options:{required:false} } ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.MO)</th>
-		
-                
 				     <th data-options="field:'Stage',width:140,editor:{type:'textbox',options:{required:false} } ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.Stage)</th>
-		
-                
 				     <th data-options="field:'ItemNo',width:140,editor:{type:'textbox',options:{required:false} } ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.ItemNo)</th>
-		
-                
-				     <th data-options="field:'Material',width:140,editor:{type:'textbox',options:{required:false} } ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.Material)</th>
-		
-                
-				     <th data-options="field:'Description',width:140,editor:{type:'textbox',options:{required:false} } ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.Description)</th>
-		
-                
-				     <th data-options="field:'Keeper',width:140,editor:{type:'textbox',options:{required:false} } ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.Keeper)</th>
-		
-                
-				     <th data-options="field:'FromWH',width:140,editor:{type:'textbox',options:{required:false} } ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.FromWH)</th>
-		
-                
+                     <th data-options="field:'Material',width:140,editor:{type:'textbox',options:{required:false} } ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.Material)</th>
+                     <th data-options="field:'Description',width:140,editor:{type:'textbox',options:{required:false} } ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.Description)</th>
+                        <th data-options="field:'RequestQty',width:100,align:'right',editor:{type:'numberbox',options:{precision:0,required:false}} ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.RequestQty)</th>
+                        <th data-options="field:'Keeper',width:140,editor:{type:'textbox',options:{required:false} } ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.Keeper)</th>
+                     <th data-options="field:'FromWH',width:140,editor:{type:'textbox',options:{required:false} } ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.FromWH)</th>
 				     <th data-options="field:'ToWH',width:140,editor:{type:'textbox',options:{required:false} } ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.ToWH)</th>
-		
-                
-				     <th data-options="field:'RequestQty',width:100,align:'right',editor:{type:'numberbox',options:{precision:0,required:false}} ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.RequestQty)</th>
-		
-                
-				     <th data-options="field:'Building',width:140,editor:{type:'textbox',options:{required:false} } ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.Building)</th>
-		
-                
-				     <th data-options="field:'Dock',width:140,editor:{type:'textbox',options:{required:false} } ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.Dock)</th>
-		
-                
-				     <th data-options="field:'RequestDate',width:140,editor:{type:'textbox',options:{required:false} } ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.RequestDate)</th>
+                     
+                     <th data-options="field:'Building',width:140,editor:{type:'textbox',options:{required:false} } ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.Building)</th>
+                     <th data-options="field:'Dock',width:140,editor:{type:'textbox',options:{required:false} } ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.Dock)</th>
+                     <th data-options="field:'RequestDate',width:140,editor:{type:'textbox',options:{required:false} } ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.RequestDate)</th>
 		
                 
 				     <th data-options="field:'Remark',width:140,editor:{type:'textbox',options:{required:false} } ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.Remark)</th>
@@ -148,73 +119,37 @@
 		
                 
 				     <th data-options="field:'UDNo',width:140,editor:{type:'textbox',options:{required:false} } ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.UDNo)</th>
-		
-                
 				     <th data-options="field:'CloseDateTime',width:160,align:'right',editor:{type:'datebox',options:{required:false}},sortable:true,resizable:true  ,formatter:dateformatter">@Html.DisplayNameFor(model => model.CloseDateTime)</th>
 		
                 
-				     <th data-options="field:'KittingId',width:140,editor:{type:'textbox',options:{required:false} } ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.KittingId)</th>
+				     
 		
                 
-				     <th data-options="field:'OrderKey',width:140,editor:{type:'textbox',options:{required:false} } ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.OrderKey)</th>
+				     
 		
                 
 				     <th data-options="field:'StoreKey',width:140,editor:{type:'textbox',options:{required:false} } ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.StoreKey)</th>
-		
-                
 				     <th data-options="field:'ShipDate',width:140,editor:{type:'textbox',options:{required:false} } ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.ShipDate)</th>
-		
-                
 				     <th data-options="field:'ShipQty',width:100,align:'right',editor:{type:'numberbox',options:{precision:0,required:false}} ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.ShipQty)</th>
-		
-                
 				     <th data-options="field:'OrderStatus',width:140,editor:{type:'textbox',options:{required:false} } ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.OrderStatus)</th>
-		
                 
 				     <th data-options="field:'Status',width:140,editor:{type:'textbox',options:{required:false} } ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.Status)</th>
-		
-                
 				     <th data-options="field:'Remark1',width:140,editor:{type:'textbox',options:{required:false} } ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.Remark1)</th>
-		
-                
 				     <th data-options="field:'Note',width:140,editor:{type:'textbox',options:{required:false} } ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.Note)</th>
-		
-                
 				     <th data-options="field:'Unit',width:140,editor:{type:'textbox',options:{required:false} } ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.Unit)</th>
-		
-                
 				     <th data-options="field:'TrailerNumber',width:140,editor:{type:'textbox',options:{required:false} } ,sortable:true,resizable:true ">@Html.DisplayNameFor(model => model.TrailerNumber)</th>
-		
-               
 						</tr>
 				</thead>
  				</table>
 				<div id="pgakittings_toolbar" style="height:auto">
-							@if (Html.IsAuthorize("Create"))
-                            {
-                                <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-plus',plain:true" onclick="append()">新增</a>
-                            }
-                            @if (Html.IsAuthorize("Delete"))
-                            {
-                            <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-remove',plain:true" onclick="removeit()">删除</a>
-                            }
-                            @if (Html.IsAuthorize("Edit"))
-                            {
-                                <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-save',plain:true" onclick="accept()">保存</a>
-                                <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-undo',plain:true" onclick="reject()">取消</a>
-                            }
-                            <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-refresh',plain:true" onclick="reload()">刷新</a>
-                            @if (Html.IsAuthorize("Import"))
-                            {
-								<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-paperclip',plain:true" onclick="importexcel()">EXCEL 导入</a>
-                            }
-							@*<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-plus',plain:true" onclick="append()">新增</a>
+							 
+							<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-plus',plain:true" onclick="append()">新增</a>
 							<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-remove',plain:true" onclick="removeit()">删除</a>
 							<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-save',plain:true" onclick="accept()">保存</a>
 							<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-undo',plain:true" onclick="reject()">取消</a>
 					
 							<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-paperclip',plain:true" onclick="importexcel()">EXCEL 导入</a>
-							<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-refresh',plain:true" onclick="reload()">刷新</a>*@
+							<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-refresh',plain:true" onclick="reload()">刷新</a>
 				</div>
 			</div>
 			
@@ -243,7 +178,7 @@
                             'buttonText': '选择EXCEL',
                             'multi': true,
                             'displayData': 'speed',
-                            'formData': { 'modelType': 'Company' },
+                            'formData': { 'modelType': 'PgaKitting' },
                             'width': 120,
                             'successTimeout': 100000,
                             'onFallback': function () {

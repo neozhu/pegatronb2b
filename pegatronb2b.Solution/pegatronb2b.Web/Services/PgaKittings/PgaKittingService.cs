@@ -56,7 +56,14 @@ namespace pegatronb2b.Web.Services
 						{
 							Type pgakittingtype = item.GetType();
 							PropertyInfo propertyInfo = pgakittingtype.GetProperty(field.FieldName);
-							propertyInfo.SetValue(item, Convert.ChangeType(defval, propertyInfo.PropertyType), null);
+                            if (defval.ToLower() == "now" && propertyInfo.PropertyType ==typeof(DateTime))
+                            {
+                                propertyInfo.SetValue(item, Convert.ChangeType(DateTime.Now, propertyInfo.PropertyType), null);
+                            }
+                            else
+                            {
+                                propertyInfo.SetValue(item, Convert.ChangeType(defval, propertyInfo.PropertyType), null);
+                            }
 						}
                 }
                 

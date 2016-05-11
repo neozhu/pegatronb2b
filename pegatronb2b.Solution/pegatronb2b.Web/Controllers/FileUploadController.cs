@@ -25,13 +25,15 @@ namespace pegatronb2b.Web.Controllers
         //private readonly ISKUService  _sKUService;
          private readonly ICompanyService _companyService;
          private readonly IUnitOfWorkAsync _unitOfWork;
+         private readonly IPgaKittingService _kittingService;
 
-         public FileUploadController(ICompanyService companyService, IUnitOfWorkAsync unitOfWork  )
+         public FileUploadController(ICompanyService companyService, IUnitOfWorkAsync unitOfWork, IPgaKittingService kittingService)
         {
             //_iBOMComponentService = iBOMComponentService;
             //_sKUService  = sKUService;
             _unitOfWork = unitOfWork;
             _companyService = companyService;
+            _kittingService = kittingService;
         }
         //回单文件上传 文件名格式 回单+_+日期+_原始文件
         [HttpPost]
@@ -58,6 +60,11 @@ namespace pegatronb2b.Web.Controllers
                 if (modelType == "Company")
                 {
                     _companyService.ImportDataTable(datatable);
+                    _unitOfWork.SaveChanges();
+                }
+                if (modelType == "PgaKitting")
+                {
+                    _kittingService.ImportDataTable(datatable);
                     _unitOfWork.SaveChanges();
                 }
                 //if (fileType == "BOM")
