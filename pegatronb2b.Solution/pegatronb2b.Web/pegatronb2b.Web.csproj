@@ -223,6 +223,7 @@
     <Compile Include="Controllers\MenuItemsController.cs" />
     <Compile Include="Controllers\PagesController.cs" />
     <Compile Include="Controllers\PgaGrsController.cs" />
+    <Compile Include="Controllers\PgaKittingsController.cs" />
     <Compile Include="Controllers\RoleMenusController.cs" />
     <Compile Include="Extensions\ExcelHelper.cs" />
     <Compile Include="Extensions\filterRule.cs" />
@@ -252,6 +253,10 @@
     <Compile Include="Migrations\201605101346065_addm.Designer.cs">
       <DependentUpon>201605101346065_addm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201605110730192_kittings.cs" />
+    <Compile Include="Migrations\201605110730192_kittings.Designer.cs">
+      <DependentUpon>201605110730192_kittings.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationRole.cs" />
@@ -270,10 +275,16 @@
     <Compile Include="Models\MenuItemMetadata.cs" />
     <Compile Include="Models\PgaGR.cs" />
     <Compile Include="Models\PgaGrMetadata.cs" />
+    <Compile Include="Models\PgaKitting.cs" />
+    <Compile Include="Models\PgaKittingMetadata.cs" />
     <Compile Include="Models\RoleMenu.cs" />
     <Compile Include="Models\RoleMenuMetadata.cs" />
     <Compile Include="Models\RoleMenuViewModel.cs" />
     <Compile Include="Models\StoreContext.cs" />
+    <Compile Include="PagatronB2BService.asmx.cs">
+      <DependentUpon>PagatronB2BService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\BaseCodes\BaseCodeQuery.cs" />
     <Compile Include="Repositories\BaseCodes\BaseCodeRepository.cs" />
@@ -285,6 +296,8 @@
     <Compile Include="Repositories\MenuItems\MenuItemRepository.cs" />
     <Compile Include="Repositories\PgaGrs\PgaGrQuery.cs" />
     <Compile Include="Repositories\PgaGrs\PgaGrRepository.cs" />
+    <Compile Include="Repositories\PgaKittings\PgaKittingQuery.cs" />
+    <Compile Include="Repositories\PgaKittings\PgaKittingRepository.cs" />
     <Compile Include="Repositories\RoleMenus\RoleMenuQuery.cs" />
     <Compile Include="Repositories\RoleMenus\RoleMenuRepository.cs" />
     <Compile Include="Services\BaseCodes\BaseCodeService.cs" />
@@ -297,6 +310,8 @@
     <Compile Include="Services\MenuItems\MenuItemService.cs" />
     <Compile Include="Services\PgaGrs\IPgaGrService.cs" />
     <Compile Include="Services\PgaGrs\PgaGrService.cs" />
+    <Compile Include="Services\PgaKittings\IPgaKittingService.cs" />
+    <Compile Include="Services\PgaKittings\PgaKittingService.cs" />
     <Compile Include="Services\RoleMenus\IRoleMenuService.cs" />
     <Compile Include="Services\RoleMenus\RoleMenuService.cs" />
     <Compile Include="Startup.cs" />
@@ -1294,6 +1309,7 @@
     <Content Include="Images\p_big2.jpg" />
     <Content Include="Images\p_big3.jpg" />
     <Content Include="Images\zender_logo.png" />
+    <Content Include="PagatronB2BService.asmx" />
     <Content Include="Scripts\app\inspinia.js" />
     <Content Include="Scripts\app\skin.config.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -2431,6 +2447,11 @@
     <Content Include="Views\PgaGrs\Edit.cshtml" />
     <Content Include="Views\PgaGrs\EditForm.cshtml" />
     <Content Include="Views\PgaGrs\_PopupSearch.cshtml" />
+    <Content Include="Views\PgaKittings\Index.cshtml" />
+    <Content Include="Views\PgaKittings\Create.cshtml" />
+    <Content Include="Views\PgaKittings\Edit.cshtml" />
+    <Content Include="Views\PgaKittings\EditForm.cshtml" />
+    <Content Include="Views\PgaKittings\_PopupSearch.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2473,6 +2494,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201605101346065_addm.resx">
       <DependentUpon>201605101346065_addm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605110730192_kittings.resx">
+      <DependentUpon>201605110730192_kittings.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

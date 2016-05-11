@@ -40,5 +40,7 @@ namespace pegatronb2b.Web.Models
         public System.Data.Entity.DbSet<pegatronb2b.Web.Models.Company> Companies { get; set; }
 
         public System.Data.Entity.DbSet<pegatronb2b.Web.Models.PgaGr> PgaGrs { get; set; }
+
+        public System.Data.Entity.DbSet<pegatronb2b.Web.Models.PgaKitting> PgaKittings { get; set; }
     }
 }

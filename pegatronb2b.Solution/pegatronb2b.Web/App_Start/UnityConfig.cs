@@ -112,6 +112,9 @@ namespace pegatronb2b.Web.App_Start
 
             container.RegisterType<IRepositoryAsync<PgaGr>, Repository<PgaGr>>();
             container.RegisterType<IPgaGrService, PgaGrService>();
+
+            container.RegisterType<IRepositoryAsync<PgaKitting>, Repository<PgaKitting>>();
+            container.RegisterType<IPgaKittingService, PgaKittingService>();
         }
     }
 }

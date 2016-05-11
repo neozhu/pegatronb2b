@@ -33,10 +33,18 @@ namespace pegatronb2b.Web.Models
     }
     public class GrRequestViewModel
     {
-        public IEnumerable<GrRequestItem> GrRequestItems { get; set; }
+        public GrRequestViewModel()
+        {
+            //GrRequestItems = new List<GrRequestItem>();
+        }
+        public  GrRequestItem[] GrRequestItems { get; set; }
     }
 
     public class GrReponseViewModel {
-        public IEnumerable<GrResponseItem> GrResponseItems { get; set; }
+        public GrReponseViewModel()
+        {
+            //GrResponseItems = new List<GrResponseItem>();
+        }
+        public GrResponseItem[] GrResponseItems { get; set; }
     }
 }

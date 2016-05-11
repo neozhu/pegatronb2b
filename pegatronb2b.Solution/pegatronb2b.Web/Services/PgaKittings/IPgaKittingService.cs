@@ -16,14 +16,12 @@ using System.Data;
 
 namespace pegatronb2b.Web.Services
 {
-    public interface IPgaGrService:IService<PgaGr>
+    public interface IPgaKittingService:IService<PgaKitting>
     {
 
          
          
  
 		void ImportDataTable(DataTable datatable);
-
-        GrReponseViewModel B2BInbound(GrRequestViewModel request);
 	}
 }
