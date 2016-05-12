@@ -26,3 +26,4 @@ C:\Users\work\Desktop\GitHub\pegatronb2b\pegatronb2b.Solution\URF.Framework\Repo
 C:\Users\work\Desktop\GitHub\pegatronb2b\pegatronb2b.Solution\URF.Framework\Repository.Pattern\bin\Debug\Repository.Pattern.pdb
 C:\Users\work\Desktop\GitHub\pegatronb2b\pegatronb2b.Solution\URF.Framework\Repository.Pattern\obj\Debug\Repository.Pattern.dll
 C:\Users\work\Desktop\GitHub\pegatronb2b\pegatronb2b.Solution\URF.Framework\Repository.Pattern\obj\Debug\Repository.Pattern.pdb
+C:\Users\work\Desktop\GitHub\pegatronb2b\pegatronb2b.Solution\URF.Framework\Repository.Pattern\obj\Debug\Repository.Pattern.csprojResolveAssemblyReference.cache

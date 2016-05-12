@@ -16,6 +16,7 @@ using pegatronb2b.Web.Repositories;
 
 using System.Data;
 using System.Reflection;
+using pegatronb2b.Web.Models.Info;
 namespace pegatronb2b.Web.Services
 {
     public class PgaGrService : Service<PgaGr>, IPgaGrService
@@ -101,6 +102,72 @@ namespace pegatronb2b.Web.Services
             }
 
             return response;
+        }
+
+
+        public IEnumerable<Models.Info.AdvancedShipNotice> GenerateAsn(params string[] transmitId)
+        {
+            var asnlist = new List<AdvancedShipNotice>();
+            var grlist = this.Queryable().Where(x => transmitId.Contains(x.TransmitId) && string.IsNullOrEmpty(x.ReceiptKey)).ToList();
+            var group = grlist.GroupBy(x => new
+            {
+                TransmitId = x.TransmitId,
+                StoreKey = x.StoreKey,
+                Vendor = x.Vendor,
+                RC = x.RC,
+                Warehouse = x.Warehouse,
+                Area = x.Area
+            })
+                        .Select(x=>x.Key);
+            foreach (var key in group)
+            {
+                var list= this.Queryable().Where(x=>x.TransmitId==key.TransmitId &&
+                    x.StoreKey==key.StoreKey &&
+                    x.Vendor==key.Vendor &&
+                    x.RC==x.RC &&
+                    x.Warehouse ==key.Warehouse &&
+                    x.Area ==key.Area).ToList();
+                var gritem = list.First();
+                var asn = new AdvancedShipNotice();
+                
+                var head = new AdvancedShipNoticeHeader();
+                head.StorerKey = key.StoreKey;
+                head.Notes = gritem.Brand;
+                head.Type = "1";
+                head.Priority = "1";
+                head.CUSTOMTYPE = "3";
+                head.TransportationMode = "7";
+                
+                head.SUsr1 = gritem.Susr1;
+                head.ExternReceiptKey = gritem.UDNo;
+                foreach (var item in list) {
+                    var detail = new AdvancedShipNoticeDetail();
+                    detail.Sku = item.Material;
+                    detail.QtyAdjusted = item.Quantity.ToString();
+                    detail.LOTTABLE18 =  item.Warehouse + "/" + item.Area;
+                    detail.LOTTABLE21 = item.Vendor;
+                    detail.Lottable02 = item.GRNo;
+                    detail.Lottable06 = item.StoreKey;
+                    detail.Lottable07 = item.Material;
+                    detail.LOTTABLE12 = "142";
+                    detail.LOTTABLE15 = "9";
+                    detail.StorerKey = item.StoreKey;
+                    detail.ExternLineNo = item.GRItem;
+                    detail.ExternReceiptKey = item.UDNo;
+                    detail.SUsr2 = string.IsNullOrEmpty(item.Susr2) ? "CN" : item.Susr2;
+                    head.AdvancedShipNoticeDetail.Add(detail);
+
+
+                }
+                asn.AdvancedShipNoticeHeader = head;
+                asnlist.Add(asn);
+
+            }
+
+                        
+
+
+            return asnlist;
         }
     }
 }

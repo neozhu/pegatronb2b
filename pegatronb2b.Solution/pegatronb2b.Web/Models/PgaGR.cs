@@ -34,6 +34,12 @@ namespace pegatronb2b.Web.Models
 
         public string Status { get; set; }
 
+
+        public string Remark1 { get; set; }
+        public string Remark2 { get; set; }
+        public string ReceiptStatus { get; set; }
+        public string Result { get; set; }
+
         [Display(Name="总件数" )]
         public string Susr1 { get; set; }
         [Display(Name = "包装代码")]

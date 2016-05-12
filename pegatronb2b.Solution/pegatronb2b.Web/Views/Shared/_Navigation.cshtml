@@ -25,14 +25,14 @@
                     世硕供应链
                 </div>
             </li>
-            <li class="@Html.IsSelected(controller: "PgaGrs,PgaKittings")">
+            <li class="@Html.IsSelected(controller: "PgaGrs,PgaKittings,PgaSkus")">
                 <a href="#"><i class="fa fa-sitemap"></i> <span class="nav-label">世硕外租仓业务</span> <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level collapse @Html.IsSelected(controller: "PgaGrs", cssClass: "in")">
 
                     <li class="@Html.IsSelected(action: "Index", controller: "PgaGrs")"><a href="@Url.Action("Index", "PgaGrs")">ASN导入</a></li>
                     <li class="@Html.IsSelected(action: "Index", controller: "PgaKittings")"><a href="@Url.Action("Index", "PgaKittings")">Kitting导入</a></li>
 
-
+                    <li class="@Html.IsSelected(action: "Index", controller: "PgaSkus")"><a href="@Url.Action("Index", "PgaSkus")">物料主档</a></li>
 
                 </ul>
             </li>

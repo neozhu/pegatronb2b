@@ -224,6 +224,7 @@
     <Compile Include="Controllers\PagesController.cs" />
     <Compile Include="Controllers\PgaGrsController.cs" />
     <Compile Include="Controllers\PgaKittingsController.cs" />
+    <Compile Include="Controllers\PgaSkusController.cs" />
     <Compile Include="Controllers\RoleMenusController.cs" />
     <Compile Include="Extensions\ExcelHelper.cs" />
     <Compile Include="Extensions\filterRule.cs" />
@@ -257,6 +258,14 @@
     <Compile Include="Migrations\201605110730192_kittings.Designer.cs">
       <DependentUpon>201605110730192_kittings.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201605120240396_gr.cs" />
+    <Compile Include="Migrations\201605120240396_gr.Designer.cs">
+      <DependentUpon>201605120240396_gr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201605120627114_sku.cs" />
+    <Compile Include="Migrations\201605120627114_sku.Designer.cs">
+      <DependentUpon>201605120627114_sku.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationRole.cs" />
@@ -269,6 +278,7 @@
     <Compile Include="Models\DataTableImport.cs" />
     <Compile Include="Models\GrRequestViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Info\AdvancedShipNotice.cs" />
     <Compile Include="Models\ManagementViewModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MenuItem.cs" />
@@ -277,6 +287,8 @@
     <Compile Include="Models\PgaGrMetadata.cs" />
     <Compile Include="Models\PgaKitting.cs" />
     <Compile Include="Models\PgaKittingMetadata.cs" />
+    <Compile Include="Models\PgaSku.cs" />
+    <Compile Include="Models\PgaSkuMetadata.cs" />
     <Compile Include="Models\RoleMenu.cs" />
     <Compile Include="Models\RoleMenuMetadata.cs" />
     <Compile Include="Models\RoleMenuViewModel.cs" />
@@ -298,6 +310,8 @@
     <Compile Include="Repositories\PgaGrs\PgaGrRepository.cs" />
     <Compile Include="Repositories\PgaKittings\PgaKittingQuery.cs" />
     <Compile Include="Repositories\PgaKittings\PgaKittingRepository.cs" />
+    <Compile Include="Repositories\PgaSkus\PgaSkuQuery.cs" />
+    <Compile Include="Repositories\PgaSkus\PgaSkuRepository.cs" />
     <Compile Include="Repositories\RoleMenus\RoleMenuQuery.cs" />
     <Compile Include="Repositories\RoleMenus\RoleMenuRepository.cs" />
     <Compile Include="Services\BaseCodes\BaseCodeService.cs" />
@@ -312,6 +326,8 @@
     <Compile Include="Services\PgaGrs\PgaGrService.cs" />
     <Compile Include="Services\PgaKittings\IPgaKittingService.cs" />
     <Compile Include="Services\PgaKittings\PgaKittingService.cs" />
+    <Compile Include="Services\PgaSkus\IPgaSkuService.cs" />
+    <Compile Include="Services\PgaSkus\PgaSkuService.cs" />
     <Compile Include="Services\RoleMenus\IRoleMenuService.cs" />
     <Compile Include="Services\RoleMenus\RoleMenuService.cs" />
     <Compile Include="Startup.cs" />
@@ -2452,6 +2468,11 @@
     <Content Include="Views\PgaKittings\Edit.cshtml" />
     <Content Include="Views\PgaKittings\EditForm.cshtml" />
     <Content Include="Views\PgaKittings\_PopupSearch.cshtml" />
+    <Content Include="Views\PgaSkus\Index.cshtml" />
+    <Content Include="Views\PgaSkus\Create.cshtml" />
+    <Content Include="Views\PgaSkus\Edit.cshtml" />
+    <Content Include="Views\PgaSkus\EditForm.cshtml" />
+    <Content Include="Views\PgaSkus\_PopupSearch.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2497,6 +2518,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201605110730192_kittings.resx">
       <DependentUpon>201605110730192_kittings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605120240396_gr.resx">
+      <DependentUpon>201605120240396_gr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605120627114_sku.resx">
+      <DependentUpon>201605120627114_sku.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

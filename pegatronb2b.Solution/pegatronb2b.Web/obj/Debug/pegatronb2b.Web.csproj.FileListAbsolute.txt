@@ -93,3 +93,5 @@ C:\Users\work\Desktop\GitHub\pegatronb2b\pegatronb2b.Solution\pegatronb2b.Web\ob
 C:\Users\work\Desktop\GitHub\pegatronb2b\pegatronb2b.Solution\pegatronb2b.Web\obj\Debug\pegatronb2b.Web.Migrations.pgagr.resources
 C:\Users\work\Desktop\GitHub\pegatronb2b\pegatronb2b.Solution\pegatronb2b.Web\obj\Debug\pegatronb2b.Web.Migrations.addm.resources
 C:\Users\work\Desktop\GitHub\pegatronb2b\pegatronb2b.Solution\pegatronb2b.Web\obj\Debug\pegatronb2b.Web.Migrations.kittings.resources
+C:\Users\work\Desktop\GitHub\pegatronb2b\pegatronb2b.Solution\pegatronb2b.Web\obj\Debug\pegatronb2b.Web.Migrations.gr.resources
+C:\Users\work\Desktop\GitHub\pegatronb2b\pegatronb2b.Solution\pegatronb2b.Web\obj\Debug\pegatronb2b.Web.Migrations.sku.resources

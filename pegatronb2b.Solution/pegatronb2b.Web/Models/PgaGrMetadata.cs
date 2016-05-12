@@ -104,6 +104,19 @@ namespace pegatronb2b.Web.Models
         [MaxLength(10)]
         public string ReceiptType { get; set; }
 
+        [Display(Name = "备注1")]
+        [MaxLength(100)]
+        public string Remark1 { get; set; }
+        [Display(Name = "备注1")]
+        [MaxLength(100)]
+        public string Remark2 { get; set; }
+        [Display(Name = "收货单状态")]
+        [MaxLength(10)]
+        public string ReceiptStatus { get; set; }
+        [Display(Name = "导入结果")]
+        [MaxLength(100)]
+        public string Result { get; set; }
+
         [Display(Name = "CreatedDate")]
         public DateTime CreatedDate { get; set; }
 
