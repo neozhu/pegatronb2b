@@ -202,6 +202,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\MailServerSettings.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
@@ -231,6 +232,7 @@
     <Compile Include="Extensions\HtmlExtensions.cs" />
     <Compile Include="Extensions\LinqOrderByColumnsNameExtensions.cs" />
     <Compile Include="Extensions\PageListExtensions.cs" />
+    <Compile Include="Extensions\toHtmlTable.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -331,6 +333,7 @@
     <Compile Include="Services\RoleMenus\IRoleMenuService.cs" />
     <Compile Include="Services\RoleMenus\RoleMenuService.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Utility\MailClient.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\animate.css" />
