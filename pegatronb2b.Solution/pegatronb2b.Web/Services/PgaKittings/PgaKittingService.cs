@@ -35,12 +35,13 @@ namespace pegatronb2b.Web.Services
 
 		public void ImportDataTable(System.Data.DataTable datatable)
         {
+            var batchId = "K" + DateTime.Now.ToString("yyyyMMddHHmmssfff") + "001";
             foreach (DataRow row in datatable.Rows)
             {
                  
                 PgaKitting item = new PgaKitting();
 				var mapping = _mappingservice.Queryable().Where(x => x.EntitySetName == "PgaKitting").ToList();
-
+                item.KittingId = batchId;
                 foreach (var field in mapping)
                 {
                  
